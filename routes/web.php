@@ -11,7 +11,7 @@
 |
 */
 
-Route::prefix('todo')->group(function(){
+
     // 一覧
     Route::get('/', 'ToDoController@index')->name('todo.index');
 
@@ -41,4 +41,4 @@ Route::prefix('todo')->group(function(){
     Route::post('/{id}/delete', 'ToDoController@destroy')
         ->where('id', '[0-9]+')
         ->name('todo.destroy');
-});
+
